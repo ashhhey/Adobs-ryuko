@@ -2,32 +2,32 @@ module.exports.config = {
   name: "help",
   version: "1.0.2",
   hasPermssion: 0,
-  credits: "Mirai Team (modified by Siegfried Sama)",
+  credits: "PetterSever",
   description: "Beginner's Guide",
   commandCategory: "system",
-  usePrefix: true,
-  usages: "[Name module]",
-  cooldowns: 5,
+    usePrefix: true,
+  usages: "[Tên module]",
+  cooldowns: 1,
   envConfig: {
     autoUnsend: false,
-    delayUnsend: 20
+    delayUnsend: 30
   }
 };
 
 module.exports.languages = {
-  "vi": {
-    "moduleInfo": "「 %1 」\n%2\n\n❯ Cách sử dụng: %3\n❯ Thuộc nhóm: %4\n❯ Thời gian chờ: %5 giây(s)\n❯ Quyền hạn: %6\n\n» Module code by %7 «",
-    "helpList": '[ Hiện tại đang có %1 lệnh có thể sử dụng trên bot này, Sử dụng: "%2help nameCommand" để xem chi tiết cách sử dụng! ]"',
-    "user": "Người dùng",
-        "adminGroup": "Quản trị viên nhóm",
-        "adminBot": "Quản trị viên bot"
-  },
+  //"vi": {
+  //	"moduleInfo": "「 %1 」\n%2\n\n❯ Cách sử dụng: %3\n❯ Thuộc nhóm: %4\n❯ Thời gian chờ: %5 giây(s)\n❯ Quyền hạn: %6\n\n» Module code by %7 «",
+  //	"helpList": '[ Hiện tại đang có %1 lệnh có thể sử dụng trên bot này, Sử dụng: "%2help nameCommand" để xem chi tiết cách sử dụng! ]"',
+  //	"user": "Người dùng",
+  //      "adminGroup": "Quản trị viên nhóm",
+  //      "adminBot": "Quản trị viên bot"
+//	},
   "en": {
-    "moduleInfo": "「 %1 」\n%2\n\n❯ version: %7\n❯ usage: %3\n❯ category: %4\n❯ waiting time: %5 seconds(s)\n❯ permission: %6",
+    "moduleInfo": "「 %1 」\n%2\n\n❯ Usage: %3\n❯ Category: %4\n❯ Waiting time: %5 seconds(s)\n❯ Permission: %6\n\n» Module code by %7 «",
     "helpList": '[ There are %1 commands on this bot, Use: "%2help nameCommand" to know how to use! ]',
-    "user": "user",
-        "adminGroup": "admin group",
-        "adminBot": "admin bot"
+    "user": "User",
+        "adminGroup": "Admin group",
+        "adminBot": "Admin bot"
   }
 };
 
@@ -41,7 +41,7 @@ module.exports.handleEvent = function ({ api, event, getText }) {
   const threadSetting = global.data.threadData.get(parseInt(threadID)) || {};
   const command = commands.get(splitBody[1].toLowerCase());
   const prefix = (threadSetting.hasOwnProperty("PREFIX")) ? threadSetting.PREFIX : global.config.PREFIX;
-  return api.sendMessage(getText("moduleInfo", command.config.name, command.config.description, `${prefix}${command.config.name} ${(command.config.usages) ? command.config.usages : ""}`, command.config.commandCategory, command.config.cooldowns, ((command.config.hasPermssion == 0) ? getText("user") : (command.config.hasPermssion == 1) ? getText("adminGroup") : getText("adminBot")), command.config.version, command.config.usePrefix), threadID, messageID);
+  return api.sendMessage(getText("moduleInfo", command.config.name, command.config.description, `${prefix}${command.config.name} ${(command.config.usages) ? command.config.usages : ""}`, command.config.commandCategory, command.config.cooldowns, ((command.config.hasPermssion == 0) ? getText("user") : (command.config.hasPermssion == 1) ? getText("adminGroup") : getText("adminBot")), command.config.credits), threadID, messageID);
 }
 
 module.exports. run = function({ api, event, args, getText }) {
@@ -55,9 +55,10 @@ module.exports. run = function({ api, event, args, getText }) {
   if (!command) {
     const arrayInfo = [];
     const page = parseInt(args[0]) || 1;
-    const numberOfOnePage = 20;
+    const numberOfOnePage = 7;
+    //*số thứ tự 1 2 3.....cú pháp ${++i}*//
     let i = 0;
-    let msg = "List of Commands\n\n";
+    let msg = "";
 
     for (var [name, value] of (commands)) {
       name += ``;
@@ -70,17 +71,20 @@ module.exports. run = function({ api, event, args, getText }) {
     i = startSlice;
     const returnArray = arrayInfo.slice(startSlice, startSlice + numberOfOnePage);
 
-    for (let item of returnArray) msg += `${item}\n`;
+    for (let item of returnArray) msg += `「 ${++i} 」${prefix}${item}\n`;
 
-    const randomText = [ "",];
 
-    const text = `➪ page (${page}/${Math.ceil(arrayInfo.length/numberOfOnePage)})\n➟ number of pages: ${Math.ceil(arrayInfo.length/numberOfOnePage)}${randomText[Math.floor(Math.random()*randomText.length)]}`;
-return api.sendMessage(msg + "\n" + text, threadID, async (error, info) => {
+    const siu = `Command List`;
+
+ const text = `\nPage (${page}/${Math.ceil(arrayInfo.length/numberOfOnePage)})\n`;
+
+    return api.sendMessage(siu + "\n\n" + msg  + text, threadID, async (error, info) => {
       if (autoUnsend) {
-        await new Promise(resolve => setTimeout(resolve, delayUnsend * 10000));
+        await new Promise(resolve => setTimeout(resolve, delayUnsend * 1000));
         return api.unsendMessage(info.messageID);
       } else return;
-    });
+    }, event.messageID);
   }
-  return api.sendMessage(getText("moduleInfo", command.config.name, command.config.description, `${prefix}${command.config.name} ${(command.config.usages) ? command.config.usages : ""}`, command.config.commandCategory, command.config.cooldowns, ((command.config.hasPermssion == 0) ? getText("user") : (command.config.hasPermssion == 1) ? getText("adminGroup") : getText("adminBot")), command.config.version, command.config.credits), threadID, messageID);
+
+  return api.sendMessage(getText("moduleInfo", command.config.name, command.config.description, `${prefix}${command.config.name} ${(command.config.usages) ? command.config.usages : ""}`, command.config.commandCategory, command.config.cooldowns, ((command.config.hasPermssion == 0) ? getText("user") : (command.config.hasPermssion == 1) ? getText("adminGroup") : getText("adminBot")), command.config.credits), threadID, messageID);
 };

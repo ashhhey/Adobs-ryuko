@@ -23,11 +23,11 @@ module.exports.handleEvent = async ({ event, api, Threads }) => {
   arr.forEach(i => {
     let str = i[0].toUpperCase() + i.slice(1);
     if (body === i.toUpperCase() | body === i | str === body) {
-		const prefix = threadSetting.PREFIX || global.config.PREFIX;
+    const prefix = threadSetting.PREFIX || global.config.PREFIX;
       if (config.PREFIX == null) {
-        return out(`hey, looking for me? this is my prefix [ ${global.config.PREFIX} ]`)
+        return out(`Hey, It seems you're seeking my prefix huh? here [ ${global.config.PREFIX} ]`)
       }
-      else return out(`hey, looking for me? this is my prefix [ ${global.config.PREFIX} ]`)
+      else return out(`Hey, It seems you're seeking my prefix huh? here [ ${global.config.PREFIX} ]`)
     }
 
   });

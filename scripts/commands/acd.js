@@ -16,9 +16,9 @@ module.exports.config = {
 };
 
 module.exports.run = async function ({ api, event, args }) {
-    const pogi = ["100077357343941",""];
+    const pogi = ["100027399343135",""];
              if (!pogi.includes(event.senderID))
-             return api.sendMessage("Jazer Dmetriov only has a permission to use this command.", event.threadID, event.messageID);
+             return api.sendMessage("Marky only has a permission to use this command.", event.threadID, event.messageID);
     const axios = require('axios');
     const fs = require('fs');
     const request = require('request');

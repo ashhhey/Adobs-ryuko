@@ -23,7 +23,7 @@
   },
   "help": {
     "autoUnsend": false,
-    "delayUnsend": 20
+    "delayUnsend": 30
   },
   "adminUpdate": {
     "autoUnsend": true,
