@@ -3,13 +3,13 @@
   "commandDisabled": [],
   "eventDisabled": [],
   "language": "en",
-  "BOTNAME": "kazuma lvl.69",
-  "PREFIX": ">",
+  "BOTNAME": "adobo v.0.0.1",
+  "PREFIX": "~",
   "OPERATOR": [
-    "100077357343941"
+    "100027399343135"
   ],
   "ADMINBOT": [
-    "100077357343941",
+    "100027399343135",
     "",
     "",
     ""

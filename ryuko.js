@@ -2,7 +2,7 @@ module.exports = async ({ api }) => {
   const logger = require('./ryuko/catalogs/ryukoc.js')
   const configCustom = {
     autoRestart: {
-      status: true,
+      status: false,
       time: 30, // 20 minutes
       note: 'to avoid problems, enable periodic bot restarts, set the status to false if you want to disable auto restart function.'
     },
@@ -15,7 +15,7 @@ module.exports = async ({ api }) => {
   function autoRestart(config) {
     if(config.status) {
       setInterval(async () => {
-        logger(`auto restart is processing, please wait.`, "kazuma lvl.69")
+        logger(`auto restart is processing, please wait.`, "adobo v.0.0.1")
         process.exit(1)
       }, config.time * 60 * 1000)
     }
