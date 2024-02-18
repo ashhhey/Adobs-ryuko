@@ -11,6 +11,7 @@
     "author": "ryuko",
     "license": "GPL-3.0",
     "dependencies": {
+        "@xaviabot/fb-downloader": "^1.0.14",
         "aes-js": "latest",
         "axios": "latest",
         "bluebird": "^2.11.0",
