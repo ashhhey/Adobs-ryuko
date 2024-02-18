@@ -29,7 +29,7 @@ module.exports.run = async function({ api, event }) {
   const { join } = global.nodemodule["path"];
   const { threadID } = event;
   if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
-      api.changeNickname(`kazuma lvl.69`, threadID, api.getCurrentUserID());
+      api.changeNickname(`unknown v1.0.0`, threadID, api.getCurrentUserID());
       const fs = require("fs");
       return api.sendMessage("", event.threadID, () => api.sendMessage({body: "Bot Connected"} ,threadID));
   }
