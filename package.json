@@ -2,7 +2,7 @@
     "name": "ryuko",
     "version": "4.0.0",
     "description": "simple messenger bot",
-    "main": "",
+    "main": "ryuko/catalogs/ryukoa.js",
     "scripts": {
         "start": "node ryuko/catalogs/ryukoa.js",
         "login": "node login",
