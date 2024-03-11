@@ -6,14 +6,15 @@ const { get } = require('axios');
 let url = "https://ai-tools.replit.app";
 
 module.exports.config = {
-    name: "ai",
-    version: "1.0.0",
-    permission: 0,
-    usePrefix: false,
-    credits: "Deku",
-    description: "Talk to AI with continuous conversation.",
-    usages: "[prompt]",
-    cooldown: 0,
+  name: "ai",
+  version: "1.0.0",
+  hasPermission: 0,
+  credits: "unknown",
+  description: "OpenAI official AI with no prefix",
+  commandCategory: "education",
+  usePrefix: true,
+  usages: "...",
+  cooldowns: 0
 };
 
 module.exports.run = async function({ api, event, args }) {
@@ -26,7 +27,7 @@ module.exports.run = async function({ api, event, args }) {
         api.sendMessage("Please bear with me while I ponder your request...", event.threadID, event.messageID);
         const response = await get(`${url}/gpt?prompt=${encodeURIComponent(prompt)}&uid=${event.senderID}`);
         const data = response.data;
-        return sendMessage(`𝗔𝗜 🚀\n━━━━━━━━━━━━━━━━━━━\n𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻: ${prompt}\n━━━━━━━━━━━━━━━━━━━\n𝗔𝗻𝘀𝘄𝗲𝗿: ${data.gpt4}\n\ncredits: www.facebook.com/mark.dev69`);
+        return sendMessage(`${data.gpt4}\n\ncredits: www.facebook.com/mark.dev69`);
     } catch (error) {
         return sendMessage(error.message);
     }
