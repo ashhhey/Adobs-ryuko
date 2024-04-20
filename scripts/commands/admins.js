@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: 'admins',
+    name: 'adminlist',
     version: '1.0.0',
     hasPermssion: 0,
     credits: 'ryuko',
