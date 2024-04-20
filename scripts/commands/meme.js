@@ -8,7 +8,7 @@ module.exports.config = {
   credits: "Rickciel",
   usePrefix: true,
   description: "Generate a random meme",
-  commandCategory: "Fun",
+  commandCategory: "other",
   cooldowns: 2,
 };
 
