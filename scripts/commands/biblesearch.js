@@ -5,7 +5,7 @@ module.exports.config = {
     credits: "ryuko",
     description: "search for bible verse.",
     usePrefix: true,
-    commandCategory: "Search",
+    commandCategory: "other",
     usages: "[john 3:16]",
     cooldowns: 2,
 };
