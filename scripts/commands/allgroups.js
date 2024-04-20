@@ -5,7 +5,7 @@ module.exports.config = {
   credits: "ryuko",
   description: "all groups",
   usePrefix: true,
-  commandCategory: "admin",
+  commandCategory: "group",
   usages: "groups",
   cooldowns: 5,
 };
