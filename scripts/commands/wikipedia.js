@@ -5,7 +5,7 @@ module.exports.config = {
 	credits: "ryuko",
 	usePrefix: true,
 	description: "wikipedia search",
-	commandCategory: "Search",
+	commandCategory: "other",
 	usages: "[en] [question]",
 	cooldowns: 1,
 	dependencies: {
