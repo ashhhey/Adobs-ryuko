@@ -4,7 +4,7 @@ module.exports.config = {
   hasPermssion: 0,
   credits: 'D-Jukie mod by chinhle',
   description: 'Play video via YouTube link or search keyword',
-  commandCategory: 'Song/video',
+  commandCategory: 'other',
   usages: '[searchVideos]',
   usePrefix: true,
   cooldowns: 10,
