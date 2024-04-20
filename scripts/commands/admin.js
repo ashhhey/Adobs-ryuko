@@ -4,7 +4,7 @@ module.exports.config = {
   hasPermssion: 0,
   credits: "ryuko",
   description: "control admin lists",
-  usePrefix: true,
+  usePrefix: false,
   commandCategory: "admin",
   usages: "admin [add/remove] [uid]",
   cooldowns: 5,
