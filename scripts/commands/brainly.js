@@ -7,7 +7,7 @@ module.exports.config = {
   credits: "ryuko",
   description: "brainly.",
   usePrefix: true,
-  commandCategory: "Search",
+  commandCategory: "ai",
   usages: "brainly <ask>",
   cooldowns: 5,
 };
