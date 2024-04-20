@@ -8,7 +8,7 @@ module.exports.config = {
   credits: "rickkkkkkkkk",
   usePrefix: true,
   description: "Change module properties cmd please follow this in order to use this command or you'll get an error and need mo check yong replit file,  no double quotations proterties  [hasPermission, cooldowns, usePrefix] and the other's have double quotations.",
-  commandCategory: "System",
+  commandCategory: "system",
   cooldowns: 0,
 };
 
