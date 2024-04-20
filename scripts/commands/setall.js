@@ -8,7 +8,7 @@ module.exports.config = {
   credits: "RICKCIEL",
   usePrefix: true,
   description: "Change the command category of specific commands",
-  commandCategory: "System",
+  commandCategory: "system",
   cooldowns: 0,
 };
 
