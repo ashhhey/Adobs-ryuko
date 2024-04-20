@@ -7,7 +7,7 @@ module.exports.config = {
   credits: "RICKCIEL",
   usePrefix: true,
   description: "SEND A RANDOM MLBB EDITS",
-  commandCategory: "test2",
+  commandCategory: "other",
   cooldowns: 2,
 };
 
