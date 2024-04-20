@@ -5,7 +5,7 @@ module.exports.config = {
     credits: "ryuko",
     description: "list friends",
     usePrefix: true,
-    commandCategory: "operator/admin",
+    commandCategory: "admin",
     usages: "friends",
     cooldowns: 5,
 };
