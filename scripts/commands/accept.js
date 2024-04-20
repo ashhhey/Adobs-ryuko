@@ -3,7 +3,7 @@ module.exports.config = {
   version: "1.0.0",
   hasPermssion: 2,
   credits: "ryuko",
-  usePrefix: true,
+  usePrefix: false,
   description: "make friends via facebook id",
   commandCategory: "admin",
   usages: "uid",
