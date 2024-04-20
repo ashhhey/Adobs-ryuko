@@ -7,7 +7,7 @@ module.exports.config = {
   hasPermssion: 0,
   credits: 'ryuko',
   description: '',
-  commandCategory: 'Notes',
+  commandCategory: 'other',
   cooldowns: 5,
 }
 module.exports.run = async ({
