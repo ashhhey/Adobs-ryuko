@@ -5,7 +5,7 @@ module.exports.config = {
   credits: "ryuko",
   description: "beginner's guide",
   usePrefix: true,
-  commandCategory: "utility",
+  commandCategory: "system",
   usages: "[Shows Commands]",
   cooldowns: 5,
   envConfig: {
