@@ -5,7 +5,7 @@ module.exports.config = {
 	credits: "Huy",
 	description: "Sell own capital",
   usePrefix: true,
-	commandCategory: "Economy",
+	commandCategory: "games",
     cooldowns: 5,
     envConfig: {
         cooldownTime: 1000000
