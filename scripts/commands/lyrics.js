@@ -1,43 +1,45 @@
-const axios = require('axios');
-const request = require('request');
-const fs = require('fs');
-
 module.exports.config = {
-  name: 'lyrics',
-  version: '1',
-  hasPermission: 0,
-  credits: 'Grey',
-  description: 'Lyrics Finder',
-  usePrefix: false,
-  commandCategory: 'fun',
-  usages: '[ name of song ]',
-  cooldowns: 5
-};
+  name: "lyrics",
+  version: "1.0.1",
+  hasPermssion: 0,
+  credits: "unknown",
+  description: "An Image to Text Converter",
+  usePrefix: true,
+  commandCategory: "other",
+  usages: "secret",
+  cooldowns: 0,
+}
 
-module.exports.run = async ({ api, event, args }) => {
-  const song = args.join(' ');
+module.exports.run = async function({ api, event, args }) {
+  const fs = require("fs");
+  const axios = require("axios");
+  const t = args.join(" ");
 
-  if (!song) {
-    return api.sendMessage('Please enter a song.', event.threadID, event.messageID);
-  } else {
-    axios.get(`https://api.popcat.xyz/lyrics?song=${encodeURIComponent(song)}`)
-      .then(res => {
-        const { title, artist, lyrics, image } = res.data;
+  if (!t) return api.sendMessage("The title of the song is missing.", event.threadID, event.messageID);
 
-        const callback = () => {
-          api.sendMessage({
-            body: `𝗧𝗜𝗧𝗟𝗘: ${title}\n\n𝗔𝗥𝗧𝗜𝗦𝗧: ${artist}\n\n𝗟𝗬𝗥𝗜𝗖𝗦: ${lyrics}`,
-            attachment: fs.createReadStream(__dirname + '/cache/image.png')
-          }, event.threadID, () => fs.unlinkSync(__dirname + '/cache/image.png'), event.messageID);
-        };
+  try {
+    const r = await axios.get('https://lyrist.vercel.app/api/' + t);
+    const { image, lyrics, artist, title } = r.data;
 
-        request(encodeURI(image))
-          .pipe(fs.createWriteStream(__dirname + '/cache/image.png'))
-          .on('close', callback);
-      })
-      .catch(error => {
-        console.error('Lyrics API error:', error);
-        api.sendMessage('Failed to fetch lyrics.', event.threadID, event.messageID);
-      });
+    let ly = __dirname + "/cache/lyrics.png";
+    let suc = (await axios.get(image, { responseType: "arraybuffer" })).data;
+    fs.writeFileSync(ly, Buffer.from(suc, "utf-8"));
+    let img = fs.createReadStream(ly);
+
+    api.setMessageReaction("🎼", event.messageID, (err) => {}, true);
+
+    return api.sendMessage({
+      body: `Title: ${title}
+Artist: ${artist}
+
+𖢨°•°•——[ LYRICS ]——•°•°𖢨
+${lyrics}
+𖢨°•°•——[ LYRICS ]——•°•°𖢨`,
+      attachment: img
+    }, event.threadID, () => fs.unlinkSync(ly), event.messageID);
+  } catch (a) {
+    api.setMessageReaction("😿", event.messageID, (err) => {}, true);
+
+    return api.sendMessage(a.message, event.threadID, event.messageID);
   }
-};
+}
