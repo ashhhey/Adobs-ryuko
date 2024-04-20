@@ -5,7 +5,7 @@ module.exports.config = {
     credits: "ryuko",
     description: "manage/control all bot modules",
     usePrefix: true,
-    commandCategory: "operator/admin",
+    commandCategory: "admin",
     usages: "[load/unload/loadAll/unloadAll/info] [command name]",
     cooldowns: 5,
     dependencies: {
