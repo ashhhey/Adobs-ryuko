@@ -1,11 +1,11 @@
 module.exports.config = {
   name: "operator",
   version: "2.0.0",
-  hasPermssion: 0,
+  hasPermssion: 1,
   credits: "ryuko",
   description: "control operator lists",
   usePrefix: true,
-  commandCategory: "operator/admin",
+  commandCategory: "admin",
   usages: "operator [add/remove] [uid]",
   cooldowns: 5,
 };
