@@ -9,7 +9,7 @@ module.exports.config = {
   usages: "[Shows Commands]",
   cooldowns: 5,
   envConfig: {
-    autoUnsend: true,
+    autoUnsend: false,
     delayUnsend: 60
   }
 };
