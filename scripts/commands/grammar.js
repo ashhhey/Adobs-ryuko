@@ -5,7 +5,7 @@ module.exports.config = {
   credits: "ryuko",
   description: "grammar is a command that helps improve grammar by suggesting corrections and providing recommendations.",
   usePrefix: true,
-  commandCategory: "Notes",
+  commandCategory: "other",
   usages: "[senteces/paragraph]",
   cooldowns: 5,
 };
