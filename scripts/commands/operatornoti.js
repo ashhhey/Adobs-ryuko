@@ -8,7 +8,7 @@ module.exports.config = {
     credits: "ryuko",
     description: "",
     usePrefix: true,
-    commandCategory: "operator/admin",
+    commandCategory: "system",
     usages: "[msg]",
     cooldowns: 5,
 }
