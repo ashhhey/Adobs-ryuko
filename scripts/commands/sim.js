@@ -4,7 +4,7 @@ module.exports.config = {
     haspermssion: 0,
     credits: "ProcodeMew", //change api sim Jazer Dmetriov
     description: "Chat with simsimi",
-    commandCategory: "fun",
+    commandCategory: "other",
     usePrefix: true,
     usages: "[ message ]",
     cooldowns: 5,
