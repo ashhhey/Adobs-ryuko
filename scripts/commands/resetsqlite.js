@@ -5,7 +5,7 @@ module.exports.config = {
 	credits: "ryuko",
   usePrefix: true,
 	description: "reset database",
-	commandCategory: "operator/admin",
+	commandCategory: "admin",
 	usages: "[shell]",
 	cooldowns: 0,
 	dependencies: {
