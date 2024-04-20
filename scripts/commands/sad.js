@@ -7,7 +7,7 @@ module.exports.config = {
   credits: "RICKCIEL",
   usePrefix: true,
   description: "GENERATE QUOTES",
-  commandCategory: "Notes",
+  commandCategory: "other",
   cooldowns: 2,
 };
 
