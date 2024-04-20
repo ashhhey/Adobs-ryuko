@@ -4,7 +4,7 @@ module.exports.config = {
   credits: 'manhIT',
   hasPermssion: 2,
   description: 'List thread bot participated',
-  commandCategory: 'utility',
+  commandCategory: 'group',
   usages: 'listbox',
   usePrefix: true,
   cooldowns: 10
