@@ -8,7 +8,7 @@ module.exports.config = {
   credits: "RICKCIEL",
   usePrefix: true,
   description: "Change the usePrefix property of a specific command",
-  commandCategory: "System",
+  commandCategory: "system",
   cooldowns: 0,
 };
 
