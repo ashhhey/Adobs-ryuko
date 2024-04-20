@@ -5,7 +5,7 @@ module.exports.config = {
 	credits: "Deku",
 	description: "Change the bio of bot.",
   usePrefix: true,
-	commandCategory: "...",
+	commandCategory: "system",
 	usages: "[args]",
   cooldowns: 1
 }
