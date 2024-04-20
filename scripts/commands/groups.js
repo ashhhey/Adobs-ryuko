@@ -5,7 +5,7 @@ module.exports.config = {
 	credits: "ryuko",
 	usePrefix: true,
 	description: "ban or unblock a group",
-	commandCategory: "admin",
+	commandCategory: "group",
 	usages: "[unban/ban/search] [id or text]",
 	cooldowns: 5
 };
