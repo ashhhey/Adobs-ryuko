@@ -1,6 +1,6 @@
 let messageCounts = {}; 
-const spamThreshold = 20; 
-const spamInterval = 70000; 
+const spamThreshold = 30; 
+const spamInterval = 90000; 
 
 module.exports.config = {
   name: "spamleave",
@@ -8,7 +8,7 @@ module.exports.config = {
   hasPermission: 1,
   credits: "Jonell Magallanes",
   description: "Automatically detect and act on spam",
-  commandCategory: "admin",
+  commandCategory: "system",
   usePrefix: true,
   usages: "",
   cooldowns: 5,
