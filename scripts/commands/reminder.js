@@ -5,7 +5,7 @@ module.exports.config = {
 	credits: "ryuko",
 	usePrefix: true,
 	description: "notification",
-	commandCategory: "Notes",
+	commandCategory: "system",
 	usages: "[Time] [Text] ",
 	cooldowns: 5
 };
