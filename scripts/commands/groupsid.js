@@ -5,7 +5,7 @@ module.exports.config = {
 	credits: "ryuko",
 	description: "get box id", 
 	usePrefix: true,
-	commandCategory: "system",
+	commandCategory: "group",
 	usages: "groupid",
 	cooldowns: 5, 
 	dependencies: '',
