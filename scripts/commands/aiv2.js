@@ -6,8 +6,8 @@ module.exports.config = {
     hasPermssion: 0,
     credits: "Jonell Magallanes", //API BY MARK
     description: "EDUCATIONAL",
-    usePrefix: true,
-    commandCategory: "AI",
+    usePrefix: false,
+    commandCategory: "ai",
     usages: "[question]",
     cooldowns: 10
 };
