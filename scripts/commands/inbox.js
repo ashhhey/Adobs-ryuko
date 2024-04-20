@@ -7,7 +7,7 @@ module.exports.config = {
   hasPermission: 0,
   usePrefix: true,
   description: "Fetch and display inbox messages for tempmail only.",
-  commandCategory: "Utility",
+  commandCategory: "other",
   cooldowns: 5,
 };
 
