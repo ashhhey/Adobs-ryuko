@@ -5,7 +5,7 @@ module.exports.config = {
 	credits: "ryuko",
 	usePrefix: true,
 	description: "create a new post in acc bot",
-	commandCategory: "operator/admin",
+	commandCategory: "admin",
 	cooldowns: 5
 };
 
