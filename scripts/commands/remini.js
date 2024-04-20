@@ -14,7 +14,7 @@ module.exports.config = {
 };
 
 module.exports.run = async ({ api, event, args }) => {
-  let pathie = __dirname + `/cache/zombie.jpg`;
+  let pathie = __dirname + `/scripts/commands/data/zombie.jpg`;
   const { threadID, messageID } = event;
 
   var mark = event.messageReply.attachments[0].url || args.join(" ");
