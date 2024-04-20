@@ -10,7 +10,7 @@ module.exports.config = {
 	credits: "ProCoderMew",
 	description: "Add user to the group by link or id",
     usePrefix: true,
-	commandCategory: "group",
+	commandCategory: "admin",
 	usages: "[args]",
 	cooldowns: 5
 };
