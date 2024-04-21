@@ -5,7 +5,7 @@ const app = express();
 const chalk = require('chalk');
 const logger = require("./ryukoc.js");
 const path = require('path');
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '/website/ryuko.html'));
 });
@@ -13,8 +13,8 @@ console.clear();
 function startBot(message) {
     (message) ? logger(message, "starting") : "";
   console.log(chalk.bold.blue('DEPLOYING MAIN SYSTEM\n'));
-  logger.loader(`deploying app on port 3000`);
-  app.listen(logger.loader(`apps is listening port 3000`));
+  logger.loader(`deploying app on port ${chalk.blueBright(PORT)}`);
+  app.listen(logger.loader(`app deployed on port ${chalk.blueBright(PORT)}`));
   const child = spawn("node", ["--trace-warnings", "--async-stack-traces", "ryukob.js"], {
         cwd: __dirname,
         stdio: "inherit",
