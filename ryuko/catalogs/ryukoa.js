@@ -13,8 +13,8 @@ console.clear();
 function startBot(message) {
     (message) ? logger(message, "starting") : "";
   console.log(chalk.bold.blue('DEPLOYING MAIN SYSTEM\n'));
-  logger.loader(`deploying app on port ${chalk.blueBright(PORT)}`);
-  app.listen(logger.loader(`app deployed on port ${chalk.blueBright(PORT)}`));
+  logger.loader(`deploying app on port ${PORT}`);
+  app.listen(logger.loader(`app deployed on port ${PORT}`));
   const child = spawn("node", ["--trace-warnings", "--async-stack-traces", "ryukob.js"], {
         cwd: __dirname,
         stdio: "inherit",
