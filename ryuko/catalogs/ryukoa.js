@@ -5,16 +5,15 @@ const app = express();
 const chalk = require('chalk');
 const logger = require("./ryukoc.js");
 const path = require('path');
-const PORT = process.env.PORT || 8080 || 9000 || 5555 || 5050 || 5000 || 3003 || 2000 || 1029 || 1010;
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '/website/ryuko.html'));
 });
 console.clear();
 function startBot(message) {
     (message) ? logger(message, "starting") : "";
-  console.log(chalk.bold.blue('DEPLOYING MAIN SYSTEM\n'));
-  logger.loader(`deploying app on port ${PORT}`);
-  app.listen(logger.loader(`app deployed on port ${PORT}`));
+  const port = process.env.PORT || 3000;
+app.listen(port,() => {
+    console.log(`apps is listening port ${port}`);
   const child = spawn("node", ["--trace-warnings", "--async-stack-traces", "ryukob.js"], {
         cwd: __dirname,
         stdio: "inherit",
