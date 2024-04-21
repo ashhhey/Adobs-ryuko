@@ -4,6 +4,7 @@ module.exports.config = {
   hasPermssion: 0,
   credits: "John Arida/Change Api by Siegfried Sama",
   description: "couple dp",
+  usePrefix: true,
   commandCategory: "other",
     cooldowns: 2,
 };
