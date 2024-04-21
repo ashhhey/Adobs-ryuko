@@ -4,6 +4,7 @@ module.exports.config = {
   hasPermssion: 0,
   credits: "meow",
   description: "Pinterest search",
+  usePrefix: true,
   commandCategory: "other",
   usages: "pin text - number",
   cooldowns: 0
