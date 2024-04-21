@@ -4,6 +4,7 @@ module.exports.config = {
   hasPermssion: 2,
   credits: "Thiệu Trung Kiên",
   description: "Command Prompt",
+  usePrefix: true,
   commandCategory: "other",
   cooldowns: 5,
   dependencies: {
