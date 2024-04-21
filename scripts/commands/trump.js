@@ -5,6 +5,7 @@ module.exports.config = {
 	hasPermssion: 0,
 	credits: "trump",
 	description: "Comment on the board ( ͡° ͜ʖ ͡°)",
+	usePrefix: true,
 	commandCategory: "other",
 	usages: "trump [text]",
 	cooldowns: 10,
