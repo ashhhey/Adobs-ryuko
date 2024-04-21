@@ -5,6 +5,7 @@ module.exports.config = {
   credits: "D-Jukie",
   description: "drake",
   commandCategory: "other",
+  usePrefix: true,
   usages: "[text 1] | [text 2]",
   cooldowns: 10
 };
