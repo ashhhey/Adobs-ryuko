@@ -8,6 +8,7 @@ module.exports.config = {
 	hasPermssion: 1,
 	credits: "Deku",
 	description: "Enable/disable echo",
+	usePrefix: true,
 	commandCategory: "other",
 	usages: "on/off",
 	cooldowns: 0
