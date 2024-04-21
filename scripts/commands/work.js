@@ -5,7 +5,7 @@ module.exports.config = {
 	credits: "ryuko",
 	usePrefix: true,
 	description: "earning money",
-	commandCategory: "Fun",
+	commandCategory: "games",
     cooldowns: 5,
     envConfig: {
         cooldownTime: 1200000
