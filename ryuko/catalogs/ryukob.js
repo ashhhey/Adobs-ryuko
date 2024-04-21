@@ -84,7 +84,7 @@ global.moduleData = new Array();
 global.language = new Object();
 global.account = new Object();
 
-
+  
 const cheerful = gradient.fruit
 const crayon = gradient('yellow', 'lime', 'green');
 const sky = gradient('#3446eb', '#3455eb', '#3474eb');
@@ -198,7 +198,7 @@ function onBot({ models: botModel }) {
                 return process.exit(0)
             }
         }
-
+      
         const fbstate = loginApiData.getAppState();
         loginApiData.setOptions(global.ryuko.FCAOption);
         let d = loginApiData.getAppState();
@@ -221,7 +221,7 @@ console.log(chalk.bold.blue(`DEPLOYING ALL COMMANDS\n`));
                 try {
                     const module = require(`${commandsPath}/${command}`);
                     const { config } = module;
-
+                  
                   if (!config?.commandCategory) {
   try {
     throw new Error(`command - ${command} commandCategory is not in the correct format or empty`);
@@ -230,8 +230,8 @@ console.log(chalk.bold.blue(`DEPLOYING ALL COMMANDS\n`));
     continue;
   }
                   }
-
-
+                  
+                  
                  if (!config?.hasOwnProperty('usePrefix')) {
   console.log(`command -`,chalk.hex("#ff0000")(command) + ` does not have the "usePrefix" property.`);
   continue;
@@ -252,12 +252,6 @@ console.log(chalk.bold.blue(`DEPLOYING ALL COMMANDS\n`));
                                     shell: true,
                                     cwd: join(__dirname, 'node_modules')
                                 });
-                                const port = process.env.PORT || 3000;
-app.listen(port,() => {
-    console.log(`
-\x1b[34mAUTOBOT is online\x1b[0m
-
-apps is listening port ${port}`);
                                 require.cache = {};
                             } catch (error) {
                                 const errorMessage = `failed to install package ${reqDependency}\n`;
@@ -299,14 +293,14 @@ apps is listening port ${port}`);
                   } catch (err) {
   console.error("an error occurred while deploying the command : ", err);
                   }
-
+                  
                   console.err
                 } catch (error) {
                     global.loading.err(`${chalk.hex('#ff7100')(``)}failed to deploy ${chalk.hex("#FFFF00")(command)} ` + error + '\n' , "command");
                 }
             }
         })(),
-
+       
         (async () => {
             const events = readdirSync(join(global.client.mainPath, '../../scripts/events')).filter(ev => ev.endsWith('.js') && !global.config.eventDisabled.includes(ev));
             console.log(chalk.bold.blue(`\n` + `DEPLOYING ALL EVENTS\n`));
@@ -318,15 +312,15 @@ apps is listening port ${port}`);
                         global.loading.err(`${chalk.hex('#ff7100')(``)} ${chalk.hex("#FFFF00")(ev)} module is not in the correct format. `, "event");
                         continue;
                     }
-
-
+                  
+        
 if (errorMessages.length > 0) {
     console.log("commands with errors :");
     errorMessages.forEach(({ command, error }) => {
         console.log(`${command}: ${error}`);
     });
 }                  
-
+                  
                     if (global.client.events.has(config.name)) {
                         global.loading.err(`${chalk.hex('#ff7100')(``)} ${chalk.hex("#FFFF00")(ev)} module is already deployed.`, "event");
                         continue;
@@ -366,7 +360,7 @@ if (errorMessages.length > 0) {
           catch (err) {
 global.loading.err(`${chalk.hex("#ff0000")('')}${chalk.blueBright(ev)} failed with error : ${err.message}`+`\n`, "event");
         }
-
+         
 
 
             }
@@ -380,7 +374,7 @@ global.loading.err(`${chalk.hex("#ff0000")('')}${chalk.blueBright(ev)} failed wi
         const listener = require('../system/listen.js')(listenerData);
         global.custom = require('../../ryuko.js')({ api: loginApiData });
         global.handleListen = loginApiData.listenMqtt(async (error, message) => {
-          if (error) {
+            if (error) {
                 if (error.error === 'Not logged in.') {
                     logger("your bot account has been logged out", 'login');
                     return process.exit(1);
