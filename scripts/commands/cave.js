@@ -8,7 +8,7 @@ module.exports.config = {
 	commandCategory: "games",
     cooldowns: 5,
     envConfig: {
-        cooldownTime: 1000000
+        cooldownTime: 5
     }
 };
 
