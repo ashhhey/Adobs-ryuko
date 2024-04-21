@@ -2,7 +2,7 @@ module.exports = async ({ api }) => {
   const logger = require('./ryuko/catalogs/ryukoc.js')
   const configCustom = {
     autoRestart: {
-      status: true,
+      status: false,
       time: 150, // 20 minutes
       note: 'to avoid problems, enable periodic bot restarts, set the status to false if you want to disable auto restart function.'
     },
