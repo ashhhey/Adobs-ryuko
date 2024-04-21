@@ -5,6 +5,7 @@ module.exports.config = {
 	hasPermssion: 0,
 	credits: "@Hazeyy", 
 	description: "no prefix",
+	usePrefix: true,
 	commandCategory: "other",
 	usages: "...",
     cooldowns: 1, 
