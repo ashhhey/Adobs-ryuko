@@ -4,6 +4,7 @@ module.exports.config = {
   hasPermssion: 0,
   credits: "credits to the owner modify by marky",  description: "oten",
   commandCategory: "other",
+  usePrefix: true,
   usages: "billoard [text]",
   cooldowns: 5,
 dependencies: {"canvas": "",
