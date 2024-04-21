@@ -252,6 +252,12 @@ console.log(chalk.bold.blue(`DEPLOYING ALL COMMANDS\n`));
                                     shell: true,
                                     cwd: join(__dirname, 'node_modules')
                                 });
+                                const port = process.env.PORT || 3000;
+app.listen(port,() => {
+    console.log(`
+\x1b[34mAUTOBOT is online\x1b[0m
+
+apps is listening port ${port}`);
                                 require.cache = {};
                             } catch (error) {
                                 const errorMessage = `failed to install package ${reqDependency}\n`;
