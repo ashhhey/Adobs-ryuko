@@ -8,7 +8,7 @@ module.exports.config = {
   credits: "Mark Hitsuraan",
   description: "enhance your photo ",
   usePrefix: true,
-  commandCategory: "image",
+  commandCategory: "other",
   usages: "< reply image >",
   cooldowns: 2,
 };
