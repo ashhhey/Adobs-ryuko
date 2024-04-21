@@ -14,7 +14,7 @@ module.exports.config = {
 };
 
 module.exports.run = async ({ api, event, args }) => {
-  let pathie = __dirname + `/scripts/commands/data/remove_bg.jpg`;
+  let pathie = __dirname + `/cache/remove_bg.jpg`;
   const { threadID, messageID } = event;
 
   var mark = event.messageReply.attachments[0].url || args.join(" ");
