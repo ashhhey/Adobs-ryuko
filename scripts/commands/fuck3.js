@@ -5,7 +5,7 @@ module.exports.config = {
     credits: "John Lester",
     description: "Get fuck",
     usePrefix: true,
-    commandCategory: "othee",
+    commandCategory: "other",
     usages: "[@mention]",
     cooldowns: 5,
     dependencies: {
