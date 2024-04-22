@@ -5,7 +5,7 @@ module.exports.config = {
   credits: "Jas",
   description: "Rock Paper Scissors Game from Goatbot modified",
   usePrefix: true,
-  commandCategory: "games", 
+  commandCategory: "other", 
   usages: "[✊, ✋, ✌️] [money]", 
   cooldowns: 0,
 };
