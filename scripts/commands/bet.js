@@ -5,7 +5,7 @@ module.exports.config = {
 	credits: "𝙈𝙧𝙏𝙤𝙢𝙓𝙭𝙓",
 	description: "coin trowing",
   usePrefix: true,
-	commandCategory: "games",
+	commandCategory: "other",
 	usages: `Missing input\n\nHow to use?\n${global.config.PREFIX}bet <money>\n\nExample:\n${global.config.PREFIX}bet 50\n`,
 	cooldowns: 5,
 };
