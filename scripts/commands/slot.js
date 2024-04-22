@@ -5,7 +5,7 @@ module.exports.config = {
     credits: "ryuko",
     usePrefix: true,
     description: "slot game",
-    commandCategory: "games",
+    commandCategory: "other",
     usages: "slot (amount)",
     cooldowns: 5,
 };
