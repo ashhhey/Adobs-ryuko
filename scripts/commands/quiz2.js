@@ -5,7 +5,7 @@ module.exports.config = {
   credits: "Aki Hayakawa",
   usePrefix: true,
   description: "Answer trivia questions",
-  commandCategory: "games",
+  commandCategory: "other",
   cooldowns: 5,
 };
 
