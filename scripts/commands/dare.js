@@ -5,7 +5,7 @@ module.exports.config = {
   credits: "Peds aka Scott",
   description: "is a game of drawing questions",
   usePrefix: true,
-  commandCategory: "games",
+  commandCategory: "other",
   cooldowns: 1
 };
 
