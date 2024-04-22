@@ -5,7 +5,7 @@ module.exports.config = {
   credits: "Â»Prince Sanel Osorio",
   description: "Dice rolling",
   usePrefix: true,
-  commandCategory: "games",
+  commandCategory: "other",
   usages: `Missing input\n\nHow to use?\n${global.config.PREFIX}dice <bet>\n\nExample:\n${global.config.PREFIX}dice 100\n`,
   cooldowns: 5,
 };
