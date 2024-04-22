@@ -5,7 +5,7 @@ module.exports.config = {
 	credits: "Huy",
 	description: "Bán vốn tự có",
   usePrefix: true,
-	commandCategory: "games",
+	commandCategory: "other",
     cooldowns: 5,
     envConfig: {
         cooldownTime: 5
