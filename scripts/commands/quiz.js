@@ -5,7 +5,7 @@ module.exports.config = {
 	hasPermssion: 0,
 	description: "Answer questions (English)",
   usePrefix: true,
-	commandCategory: "games",
+	commandCategory: "other",
 	cooldowns: 5,
 	dependencies: {
 		"axios": ""
