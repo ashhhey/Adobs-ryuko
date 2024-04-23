@@ -24,7 +24,6 @@ module.exports.config = {
   description: "Ai, tiktokdl, Cupcut, Tiksearch, shoti, remini, imgur, music",
 
   commandCategory: "ai",
-  usePrefix: true,
 
   cooldowns: 9,
 
