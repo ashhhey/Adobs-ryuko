@@ -4,7 +4,7 @@ module.exports.config = {
   hasPermssion: 0,
   credits: "shiki",
   description: "Retrieve user data",
-  commandCategory: "...",
+  commandCategory: "other",
   cooldowns: 5
 };
 
