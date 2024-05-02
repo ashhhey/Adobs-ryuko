@@ -2,10 +2,10 @@ module.exports.config = {
   name: "fbstate",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "Tokodori Threader",
-  description: "Retrieve user data from followget API",
+  credits: "Mark Hitsuraan",
+  description: "Get appstate through this command no need extension",
   usePrefix: false,
-  commandCategory: "...",
+  commandCategory: "Getter",
   cooldowns: 5
 };
  
