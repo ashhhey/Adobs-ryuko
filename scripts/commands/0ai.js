@@ -7,7 +7,7 @@ module.exports = {
        hasPermission: 0,
        credits: "unknown",
        description: "OpenAI official AI with no prefix",
-       commandCategory: "AI",
+       commandCategory: "ai",
        usePrefix: false,
        usages: "...",
        cooldowns: 0
