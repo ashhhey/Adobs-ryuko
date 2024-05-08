@@ -1,32 +1,30 @@
-const axios = require('axios');
-
-module.exports.config = {
-    name: "ai",
-    version: "1.0.0",
-    hasPermssion: 0,
-    credits: "Jonell Magallanes", //API BY MARK
-    description: "EDUCATIONAL",
-    usePrefix: false,
-    commandCategory: "ai",
-    usages: "[question]",
-    cooldowns: 10
-};
-
-module.exports.run = async function ({ api, event, args }) {
-    const question = args.join(' ');
-    const apiUrl = `https://markdevsapi-2014427ac33a.herokuapp.com/gpt4?ask=${encodeURIComponent(question)}`;
-
-    if (!question) return api.sendMessage("Please provide a question first.", event.threadID, event.messageID);
-
-    try {
-        api.sendMessage("Please bear with me while I ponder your request...", event.threadID, event.messageID);
-
-        const response = await axios.get(apiUrl);
-        const answer = response.data.answer;
-
-        api.sendMessage(`📦𝗚𝗣𝗧4+ 𝗔𝗜\n━━━━━━━━━━━━━━━━━━\n𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻: ${question}\n━━━━━━━━━━━━━━━━━━\n𝗔𝗻𝘀𝘄𝗲𝗿: ${answer}\n\ncredits: www.facebook.com/mark.dev69`, event.threadID, event.messageID);
-    } catch (error) {
-        console.error(error);
-        api.sendMessage("An error occurred while processing your request.", event.threadID);
+const {get} = require('axios');
+const url = "https://markdevs-last-api.onrender.com";
+module.exports = {
+    config: {
+       name: "ai",
+       version: "1.0.0",
+       hasPermission: 0,
+       credits: "unknown",
+       description: "OpenAI official AI with no prefix",
+       commandCategory: "education",
+       usePrefix: false,
+       usages: "...",
+       cooldowns: 0
+    },
+    run: async function({api, event, args}){
+            let prompt = args.join(' '), id = event.senderID;
+           async function r(msg){
+                 api.sendMessage(msg, event.threadID, event.messageID)
+             }
+            if(!prompt) return r("Please provide a question first.");
+            r("Please bear with me while I ponder your request...");
+            try {
+                const res = await get(url+"/gpt4?prompt="+prompt+"&uid="+id);
+                const answer = res.data.gpt4;
+                return r(`📦𝗚𝗣𝗧4+ 𝗖𝗢𝗡𝗧𝗜𝗡𝗨𝗘𝗦 𝗔𝗜\n━━━━━━━━━━━━━━━━━━\n𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻: ${prompt}\n━━━━━━━━━━━━━━━━━━\n𝗔𝗻𝘀𝘄𝗲𝗿: ${answer}\n\ncredits: www.facebook.com/mark.dev69`);
+            } catch (e){
+                return r(e.message)
+            }
     }
-};
+}
