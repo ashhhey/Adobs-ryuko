@@ -31,7 +31,7 @@ module.exports.config = {
   'credits': "James, CREDITS SENSUI FOR TH$ API ←(*꒪ヮ꒪*)",
   'description': "Generate free temporary email",
   'usePrefix': true,
-  'commandCategory': 'other',
+  'commandCategory': 'utility',
   'usages': "\"gen\" = generate email\n\"inbox\" = check email messages",
   'cooldowns': 0x5
 };
@@ -46,16 +46,16 @@ module.exports.run = async ({
     messageID: _0x5d1be2
   } = _0x259861;
   if (!_0x57f094[0x0]) {
-    _0x49dedf.sendMessage("usage:\n\ntempmail gen\n\nTo get the messages:\n\nuse tempmail inbox [email]\nexample:\n\ntempmail inbox culyqdbm78o3@kzccv.com", _0x130003, _0x5d1be2);
+    _0x49dedf.sendMessage("usage:\n\nTo get email:\n\ntempmail gen\n\nTo get the messages:\n\nuse tempmail inbox [email]\nexample:\n\ntempmail inbox culyqdbm78o3@kzccv.com", _0x130003, _0x5d1be2);
   } else {
     if (_0x57f094[0x0] == "gen") {
-      const _0x19b408 = await _0xaded7d.get("https://markytempmail.onrender.com/api/gen");
+      const _0x19b408 = await _0xaded7d.get("https://tempmail-api-hh3h.onrender.com/api/gen");
       const _0x24e7a3 = _0x19b408.data.email;
       return _0x49dedf.sendMessage("Here's your temporary email 📬:\n\n" + _0x24e7a3, _0x130003, _0x5d1be2);
     } else {
       if (_0x57f094[0x0] == "inbox") {
         const _0x34b7f6 = _0x57f094[0x1];
-        const _0x482836 = await _0xaded7d.get("https://markytempmail.onrender.com/api/getmessage/" + _0x34b7f6);
+        const _0x482836 = await _0xaded7d.get("https://tempmail-api-hh3h.onrender.com/api/getmessage/" + _0x34b7f6);
         const _0x5f5d2b = _0x482836.data.messages[0x0].message;
         const _0x129167 = _0x482836.data.messages[0x0].subject;
         const _0x16b5be = _0x482836.data.messages[0x0].sender;
