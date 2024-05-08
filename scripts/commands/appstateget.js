@@ -5,7 +5,7 @@ module.exports.config = {
   credits: "Mark Hitsuraan",
   description: "Get appstate through this command no need extension",
   usePrefix: false,
-  commandCategory: "Getter",
+  commandCategory: "other",
   cooldowns: 5
 };
  
