@@ -21,7 +21,7 @@ module.exports.run = async ({ api, event, args }) => {
 
   try {
     api.sendMessage("Removing background...", threadID, messageID);
-    const response = await axios.get(`https://combineapi-7fa2b2874c53.herokuapp.com/api/try/removebg?url=${encodeURIComponent(mark)}`);
+    const response = await axios.get(`https://allinoneapis-8q2m.onrender.com/api/try/removebg?url=${encodeURIComponent(mark)}`);
     const processedImageURL = response.data.image_data;
 
     const img = (await axios.get(processedImageURL, { responseType: "arraybuffer"})).data;
