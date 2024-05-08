@@ -31,7 +31,7 @@ module.exports.config = {
   'credits': "James, CREDITS SENSUI FOR TH$ API ←(*꒪ヮ꒪*)",
   'description': "Generate free temporary email",
   'usePrefix': true,
-  'commandCategory': 'utility',
+  'commandCategory': 'other',
   'usages': "\"gen\" = generate email\n\"inbox\" = check email messages",
   'cooldowns': 0x5
 };
