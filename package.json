@@ -2,9 +2,9 @@
     "name": "ryuko",
     "version": "4.0.0",
     "description": "simple messenger bot",
-    "main": "ryuko/catalogs/ryukoa.js",
+    "main": "ryuko/catalogs/ra.js",
     "scripts": {
-        "start": "node ryuko/catalogs/ryukoa",
+        "start": "node ryuko/catalogs/ra",
         "login": "node login",
         "test": "node --trace-warnings --use_strict --async-stack-traces main"
     },
